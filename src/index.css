@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Fira Code", "Space Mono", monospace;
+
+  /* Premium High-End Light Accents & Blues */
+  --color-slate-950: #ffffff; /* Re-mapped for pristine white bg */
+  --color-slate-900: #f8fafc; /* Beautiful soft slate white card base */
+  --color-slate-850: #f1f5f9; /* Subtle light separator */
+  --color-slate-800: #e2e8f0;
+  --color-slate-700: #64748b; /* Accessible grey */
+  --color-slate-605: #475569;
+  --color-slate-500: #3b82f6; /* Beautiful soft blue */
+  --color-slate-400: #1d4ed8; /* Deep royal blue */
+  --color-slate-300: #1e3a8a; /* Deepest navy blue for headers */
+  --color-slate-200: #2563eb; /* Royal blue accents */
+  --color-slate-150: #dbeafe; /* Pale blue hover border tint */
+  --color-slate-100: #eff6ff; /* Background highlight blue */
+
+  /* Premium High-End Accents */
+  --color-cyan-500: #2563eb; /* Luxury electric sapphire */
+  --color-cyan-400: #3b82f6;
+  --color-cyan-300: #60a5fa;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff; /* Pristine pure white background */
+  color: #0f172a; /* Deep slate-blue for highly legible standard text */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Beautiful soft background glow gradients for light mode */
+.glow-spot-indigo {
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, rgba(37, 99, 235, 0) 70%);
+}
+
+.glow-spot-emerald {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0) 70%);
+}
+
+.glow-spot-ruby {
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.06) 0%, rgba(239, 68, 68, 0) 70%);
+}
+
+/* Luxury card wrapper with fine gradient border effects for light mode */
+.premium-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(37, 99, 235, 0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-card:hover {
+  border-color: rgba(37, 99, 235, 0.28);
+  box-shadow: 0 12px 36px rgba(37, 99, 235, 0.07);
+}
+
+/* Elegant high-tech grid overlay in subtle blue-gray tint */
+.tech-grid {
+  background-image: 
+    linear-gradient(rgba(37, 99, 235, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.015) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glowing text active indicator */
+.neon-glow-indigo {
+  text-shadow: 0 0 12px rgba(37, 99, 235, 0.15);
+}
+
+.neon-glow-emerald {
+  text-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+}

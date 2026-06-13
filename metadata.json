@@ -1,0 +1,6 @@
+{
+  "name": "BRJU Infosec",
+  "description": "Premium Cybersecurity, Forensics, and Managed IT Services showcasing deep integrations with enterprise partners.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
