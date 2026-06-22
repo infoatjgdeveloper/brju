@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { SecurityThreat } from '../types';
 import { ShieldCheck, Terminal, Play, Pause, Activity, RefreshCw } from 'lucide-react';
+import { PARTNERS } from '../data/partners';
+
 
 interface ThreatMapProps {
   onIntegrationsClick: () => void;
@@ -365,7 +367,7 @@ export default function ThreatMap({ onIntegrationsClick, onArchitectClick }: Thr
               onClick={onIntegrationsClick}
               className="w-full text-center py-2.5 bg-blue-600 border border-blue-700 hover:bg-blue-700 rounded-full text-xs font-semibold text-white tracking-wide transition-all cursor-pointer shadow-md shadow-blue-600/10"
             >
-              EXPLORE ALL 17 INTEGRATIONS
+              EXPLORE ALL {PARTNERS.length} INTEGRATIONS
             </button>
             <button
               onClick={onArchitectClick}

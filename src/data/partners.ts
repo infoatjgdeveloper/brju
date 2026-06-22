@@ -12,7 +12,22 @@ export const PARTNERS: Partner[] = [
       'Automated log behavioral scanning',
       'Artificial intelligence-backed heuristics',
       'Zero-day signature prediction model'
-    ]
+    ],
+    website: 'https://jgai.jgdeveloper.com'
+  },
+  {
+    id: 'ia7',
+    name: 'IA7 Global Tech',
+    category: 'Security',
+    status: 'active',
+    description: 'Authorized regional operating partner serving the EU and UK, delivering secure, GDPR-compliant AI systems and full-stack digital transformation.',
+    brjuValue: 'Ensures all cross-border deployments comply with GDPR and local data protection standards, managing EU-localized secure sandboxes.',
+    features: [
+      'GDPR-native data pipeline architecture',
+      'EU-localized cloud sandbox hosting',
+      'Full-stack digital transformation & compliance audits'
+    ],
+    website: 'https://www.ia7globaltech.eu'
   },
   {
     id: 'solarwinds',
