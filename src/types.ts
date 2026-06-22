@@ -7,7 +7,9 @@ export interface Partner {
   brjuValue: string;
   features: string[];
   specs?: Record<string, string>;
+  website?: string;
 }
+
 
 export interface SecurityThreat {
   id: string;

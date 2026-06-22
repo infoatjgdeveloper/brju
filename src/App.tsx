@@ -83,7 +83,7 @@ export default function App() {
               
               <p className="text-sm md:text-base text-slate-600 leading-relaxed max-w-xl font-normal">
                 Autonomous Cybersecurity, Deep Memory Forensics, and Enterprise Managed Solutions. 
-                We orchestrate and safeguard <span className="text-blue-900 font-bold">17 high-end cloud and physical integrations</span> into a single, unified corporate shield.
+                We orchestrate and safeguard <span className="text-blue-900 font-bold">{PARTNERS.length} high-end cloud and physical integrations</span> into a single, unified corporate shield.
               </p>
             </div>
 
@@ -91,7 +91,7 @@ export default function App() {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 shrink-0">
               <div className="bg-white/80 border border-blue-100/70 p-5 rounded-2xl flex flex-col justify-between backdrop-blur-md min-w-[150px] shadow-sm shadow-blue-500/5">
                 <span className="text-[10px] text-slate-500 uppercase font-bold tracking-widest block">Vendor Stack</span>
-                <span className="text-2xl font-bold text-blue-950 mt-1.5">17 Core Systems</span>
+                <span className="text-2xl font-bold text-blue-950 mt-1.5">{PARTNERS.length} Core Systems</span>
               </div>
               <div className="bg-white/80 border border-blue-100/70 p-5 rounded-2xl flex flex-col justify-between backdrop-blur-md min-w-[150px] shadow-sm shadow-blue-500/5">
                 <span className="text-[10px] text-slate-500 uppercase font-bold tracking-widest block">SOC Security</span>
@@ -173,7 +173,7 @@ export default function App() {
                   </div>
                   <h4 className="text-base font-bold text-blue-950 leading-tight">Unified Multi-Vendor Integrator</h4>
                   <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                    We do not play favorites or lock you into single-vendor silos. We manage, audit, and sell support services across 17 distinct technologies, including Odoo ERP, OpenVPN connections, and warranted refurbished systems.
+                    We do not play favorites or lock you into single-vendor silos. We manage, audit, and sell support services across {PARTNERS.length} distinct technologies, including Odoo ERP, OpenVPN connections, and warranted refurbished systems.
                   </p>
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function App() {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-blue-100 pb-6">
                 <div className="space-y-1.5">
                   <span className="text-[10px] uppercase font-bold tracking-widest text-blue-600 font-mono block">// Ecosystem Matrix</span>
-                  <h3 className="text-2xl font-bold tracking-tight text-blue-950 mt-1">17 Strategic Platform Partnerships</h3>
+                  <h3 className="text-2xl font-bold tracking-tight text-blue-950 mt-1">{PARTNERS.length} Strategic Platform Partnerships</h3>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                     We sell, custom-engineer, and manage these systems natively. Select target categories to review specific integration features and active statuses.
                   </p>
@@ -253,9 +253,21 @@ export default function App() {
                     >
                       <div className="space-y-5">
                         <div className="flex items-center justify-between border-b border-blue-100 pb-3">
-                          <span className="text-sm font-bold text-blue-950 group-hover:text-blue-600 transition-colors">
-                            {p.name}
-                          </span>
+                          {p.website ? (
+                            <a
+                              href={p.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sm font-bold text-blue-950 hover:text-blue-600 transition-colors flex items-center gap-1 group/link"
+                            >
+                              <span>{p.name}</span>
+                              <ArrowUpRight className="w-3.5 h-3.5 text-slate-400 group-hover/link:text-blue-600 transition-colors" />
+                            </a>
+                          ) : (
+                            <span className="text-sm font-bold text-blue-950 group-hover:text-blue-600 transition-colors">
+                              {p.name}
+                            </span>
+                          )}
                           
                           {/* status tags */}
                           <div className="flex items-center gap-2">
@@ -299,7 +311,19 @@ export default function App() {
                       </div>
 
                       <div className="mt-6 pt-4 border-t border-blue-100 flex items-center justify-between text-xs">
-                        <span className="text-slate-500 uppercase font-mono text-[9px]">ID: {p.id.toUpperCase()}</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-slate-500 uppercase font-mono text-[9px]">ID: {p.id.toUpperCase()}</span>
+                          {p.website && (
+                            <a
+                              href={p.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[9px] text-blue-500 hover:text-blue-700 font-mono flex items-center gap-0.5 hover:underline"
+                            >
+                              <span>[Visit Site]</span>
+                            </a>
+                          )}
+                        </div>
                         <button
                           onClick={() => {
                             setProposalDraftMessage(`Hi BRJU Infosec,\nI would like more information on installing and managing the ${p.name} integration.`);

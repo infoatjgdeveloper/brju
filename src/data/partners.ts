@@ -12,7 +12,22 @@ export const PARTNERS: Partner[] = [
       'Automated log behavioral scanning',
       'Artificial intelligence-backed heuristics',
       'Zero-day signature prediction model'
-    ]
+    ],
+    website: 'https://jgai.jgdeveloper.com'
+  },
+  {
+    id: 'ia7',
+    name: 'IA7 Global Tech',
+    category: 'Security',
+    status: 'active',
+    description: 'Authorized regional operating partner serving the EU and UK, delivering secure, GDPR-compliant AI systems and full-stack digital transformation.',
+    brjuValue: 'Ensures all cross-border deployments comply with GDPR and local data protection standards, managing EU-localized secure sandboxes.',
+    features: [
+      'GDPR-native data pipeline architecture',
+      'EU-localized cloud sandbox hosting',
+      'Full-stack digital transformation & compliance audits'
+    ],
+    website: 'https://www.ia7globaltech.eu'
   },
   {
     id: 'solarwinds',
@@ -25,7 +40,8 @@ export const PARTNERS: Partner[] = [
       'Orion network Performance Monitor',
       'Configuration drift detection',
       'Real-time visualization of hybrid networks'
-    ]
+    ],
+    website: 'https://www.solarwinds.com/'
   },
   {
     id: 'trendmicro',
@@ -38,7 +54,8 @@ export const PARTNERS: Partner[] = [
       'Apex One endpoint security',
       'Deep Security virtual patching',
       'Vision One unified XDR console'
-    ]
+    ],
+    website: 'https://www.trendmicro.com/en_gb/business.html'
   },
   {
     id: 'odoo',
@@ -51,7 +68,8 @@ export const PARTNERS: Partner[] = [
       'Modules for Accounting, Inventory, and CRM',
       'BRJU End-to-End database encryption layers',
       'Role-based granular access control (RBAC)'
-    ]
+    ],
+    website: 'https://www.odoo.com/'
   },
   {
     id: 'nuso',
@@ -64,7 +82,8 @@ export const PARTNERS: Partner[] = [
       'Secure high-definition cloud voice calling',
       'Integrated messaging and virtual meetings',
       'Protected cloud peering and failover systems'
-    ]
+    ],
+    website: 'https://www.nuso.cloud/'
   },
   {
     id: 'ooma',
@@ -77,7 +96,8 @@ export const PARTNERS: Partner[] = [
       'Virtual receptionist and remote call routing',
       'Dedicated physical VoIP office hardware integration',
       'Encrypted voice-traffic channels'
-    ]
+    ],
+    website: 'https://www.ooma.com'
   },
   {
     id: 'kzero',
@@ -90,7 +110,8 @@ export const PARTNERS: Partner[] = [
       'Biometric & hardware key passwordless sign-on',
       'Centralized password governance and secure sharing vaults',
       'SSO integrations across 1000+ business cloud apps'
-    ]
+    ],
+    website: 'https://kzero.com/'
   },
   {
     id: 'proofpoint',
@@ -103,7 +124,8 @@ export const PARTNERS: Partner[] = [
       'Targeted Attack Protection (TAP) filter',
       'Automated email attachment sandbox detonation',
       'Granular outbound DLP compliance scanning'
-    ]
+    ],
+    website: 'https://www.vircom.com/proofpoint-essentials/'
   },
   {
     id: 'checkpoint',
@@ -116,7 +138,8 @@ export const PARTNERS: Partner[] = [
       'SandBlast Zero-Day threat extraction technology',
       'High-performance packet filter & VPN gateways',
       'Dynamic security policy automation and sync'
-    ]
+    ],
+    website: 'https://www.vircom.com/'
   },
   {
     id: 'kaseya',
@@ -129,7 +152,8 @@ export const PARTNERS: Partner[] = [
       'Automated operating system and third-party software patching',
       'Background ticket resolution without employee impact',
       'Hardware asset tracking and system telemetry compilation'
-    ]
+    ],
+    website: 'https://www.kaseya.com/'
   },
   {
     id: 'refurbish_it',
@@ -168,7 +192,8 @@ export const PARTNERS: Partner[] = [
       'MAGNET Axiom unified digital artifact analysis',
       'Rapid remote endpoint volatile memory acquisition',
       'Court-admissible timelines of file-system modification events'
-    ]
+    ],
+    website: 'https://www.magnetforensics.com/'
   },
   {
     id: 'ugreen',
@@ -181,7 +206,8 @@ export const PARTNERS: Partner[] = [
       'High-throughput multi-protocol connectivity adaptiveness',
       'Strict quality metrics with built-in thermal guards',
       'Commercial charging docking stations with line surge dampers'
-    ]
+    ],
+    website: 'https://www.ugreenindia.com/'
   },
   {
     id: 'microsoft',
@@ -194,7 +220,8 @@ export const PARTNERS: Partner[] = [
       'Azure Active Directory (Entra ID) configuration',
       'M365 Cloud Sandbox configuration and auditing',
       'Exchange Online advanced threat filtering policies'
-    ]
+    ],
+    website: 'https://azure.microsoft.com/'
   },
   {
     id: 'aws',
@@ -207,7 +234,8 @@ export const PARTNERS: Partner[] = [
       'Multi-region high-availability cloud configurations',
       'AWS Identity & Access Management (IAM) structural design',
       'Secure Virtual Private Cloud (VPC) segmentation policies'
-    ]
+    ],
+    website: 'https://aws.amazon.com/'
   },
   {
     id: 'openvpn',
@@ -220,6 +248,7 @@ export const PARTNERS: Partner[] = [
       'Zero Trust Network Access (ZTNA) model capabilities',
       'Hardened AES-256 layer-3 encrypted communication tunnels',
       'Seamless multi-factor verification integration prior to connection'
-    ]
+    ],
+    website: 'https://openvpn.net/enterprise/'
   }
 ];
