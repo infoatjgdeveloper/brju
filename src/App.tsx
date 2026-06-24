@@ -7,9 +7,9 @@ import HardwareStore from './components/HardwareStore';
 import ContactPortal from './components/ContactPortal';
 import ConnectedDotsBackground from './components/ConnectedDotsBackground';
 import { PARTNERS } from './data/partners';
-import { 
-  ShieldAlert, ShieldCheck, Terminal, Filter, Search, Check, 
-  ArrowUpRight, Cpu, Radio, Network, FileClock, PhoneCall, Award 
+import {
+  ShieldAlert, ShieldCheck, Terminal, Filter, Search, Check,
+  ArrowUpRight, Cpu, Radio, Network, FileClock, PhoneCall, Award
 } from 'lucide-react';
 
 export default function App() {
@@ -37,12 +37,12 @@ export default function App() {
 
   // Filter the core 17 partners based on search query plus category matches
   const filteredPartners = PARTNERS.filter((partner) => {
-    const matchesSearch = 
+    const matchesSearch =
       partner.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       partner.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       partner.features.some(f => f.toLowerCase().includes(searchQuery.toLowerCase()));
 
-    const matchesCategory = 
+    const matchesCategory =
       selectedCategory === 'All' || partner.category === selectedCategory;
 
     return matchesSearch && matchesCategory;
@@ -56,10 +56,10 @@ export default function App() {
       </div>
 
       {/* Top Navigation */}
-      <Navbar 
-        activeTab={activeTab} 
-        setActiveTab={setActiveTab} 
-        onEmergencyTrigger={handleEmergencyTrigger} 
+      <Navbar
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        onEmergencyTrigger={handleEmergencyTrigger}
       />
 
       {/* Cybernetic Grid Background Header Cover - Modern High-End Layout */}
@@ -76,13 +76,13 @@ export default function App() {
                 <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
                 <span>Enterprise NIST Compliant MSP Consortium</span>
               </div>
-              
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-blue-950">
                 BRJU <span className="bg-gradient-to-r from-blue-700 via-blue-500 to-blue-800 bg-clip-text text-transparent">INFOSEC</span>
               </h1>
-              
+
               <p className="text-sm md:text-base text-slate-600 leading-relaxed max-w-xl font-normal">
-                Autonomous Cybersecurity, Deep Memory Forensics, and Enterprise Managed Solutions. 
+                Autonomous Cybersecurity, Deep Memory Forensics, and Enterprise Managed Solutions.
                 We orchestrate and safeguard <span className="text-blue-900 font-bold">{PARTNERS.length} high-end cloud and physical integrations</span> into a single, unified corporate shield.
               </p>
             </div>
@@ -111,10 +111,10 @@ export default function App() {
           <div className="border-t border-blue-100 pt-6 flex flex-wrap items-center justify-between gap-4 text-[10px] font-mono text-slate-500 uppercase tracking-widest">
             <span className="font-semibold text-slate-500">Compliance Alignments Accredited:</span>
             <div className="flex flex-wrap gap-5 text-blue-600 font-semibold">
-              <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-blue-600"></span> NIST SP 800-171</span>
-              <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-blue-600"></span> FIDO2 MFA</span>
+              {/* <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-blue-600"></span> NIST SP 800-171</span> */}
+              {/* <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-blue-600"></span> FIDO2 MFA</span> */}
               <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-blue-600"></span> HIPAA Protected</span>
-              <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-blue-600"></span> SOC 2 Type II</span>
+              {/* <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-blue-600"></span> SOC 2 Type II</span> */}
               <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-blue-600"></span> GDPR Compliant</span>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function App() {
 
       {/* Main Container Stage */}
       <main className="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 relative z-10">
-        
+
         {/* VIEW CONDITIONAL RENDERS */}
         {activeTab === 'overview' && (
           <div className="space-y-16">
@@ -133,9 +133,9 @@ export default function App() {
                 <span className="text-[10px] uppercase font-bold tracking-widest text-blue-600 font-mono tracking-wider">// Tactical Monitor Console</span>
                 <h3 className="text-xl font-bold tracking-tight text-blue-950 mt-1">Global Threat & Telemetry Command</h3>
               </div>
-              <ThreatMap 
-                onIntegrationsClick={() => setActiveTab('partners')} 
-                onArchitectClick={() => setActiveTab('architect')} 
+              <ThreatMap
+                onIntegrationsClick={() => setActiveTab('partners')}
+                onArchitectClick={() => setActiveTab('architect')}
               />
             </div>
 
@@ -207,7 +207,7 @@ export default function App() {
                     className="w-full bg-white/85 border border-blue-100 hover:border-blue-200 rounded-xl px-4 py-2.5 pl-10 text-xs font-mono text-blue-950 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 transition-all font-medium"
                   />
                   {searchQuery && (
-                    <button 
+                    <button
                       onClick={() => setSearchQuery('')}
                       className="absolute right-3.5 top-3.5 text-xs font-semibold text-blue-600 hover:text-blue-800 transition-colors"
                     >
@@ -223,11 +223,10 @@ export default function App() {
                   <button
                     key={cat}
                     onClick={() => setSelectedCategory(cat)}
-                    className={`px-4 py-1.5 rounded-full text-[11px] font-semibold border tracking-wide transition-all uppercase cursor-pointer ${
-                      selectedCategory === cat
+                    className={`px-4 py-1.5 rounded-full text-[11px] font-semibold border tracking-wide transition-all uppercase cursor-pointer ${selectedCategory === cat
                         ? 'bg-blue-500/10 border-blue-500/30 text-blue-700 font-bold shadow-sm shadow-blue-500/5'
                         : 'border-blue-100/50 bg-white/60 text-slate-600 hover:text-blue-700 hover:bg-blue-50/50'
-                    }`}
+                      }`}
                   >
                     {cat}
                   </button>
@@ -247,7 +246,7 @@ export default function App() {
                   const isProcess = p.status === 'in-progress';
                   const isUpcoming = p.status === 'planned';
                   return (
-                    <div 
+                    <div
                       key={p.id}
                       className="premium-card rounded-2xl p-6 flex flex-col justify-between hover:translate-y-[-2px] transition-all relative overflow-hidden group shadow-md"
                     >
@@ -268,19 +267,18 @@ export default function App() {
                               {p.name}
                             </span>
                           )}
-                          
+
                           {/* status tags */}
                           <div className="flex items-center gap-2">
                             <span className="text-[9px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100">
                               {p.category}
                             </span>
-                            <span className={`text-[9px] font-bold px-2 py-0.5 rounded-md uppercase border ${
-                              isProcess 
-                                ? 'text-amber-700 bg-amber-50 border-amber-200' 
-                                : isUpcoming 
-                                ? 'text-slate-600 bg-slate-50 border-slate-200'
-                                : 'text-emerald-700 bg-emerald-50 border-emerald-200'
-                            }`}>
+                            <span className={`text-[9px] font-bold px-2 py-0.5 rounded-md uppercase border ${isProcess
+                                ? 'text-amber-700 bg-amber-50 border-amber-200'
+                                : isUpcoming
+                                  ? 'text-slate-600 bg-slate-50 border-slate-200'
+                                  : 'text-emerald-700 bg-emerald-50 border-emerald-200'
+                              }`}>
                               {p.status.replace('-', ' ')}
                             </span>
                           </div>
@@ -356,8 +354,8 @@ export default function App() {
         )}
 
         {activeTab === 'contact' && (
-          <ContactPortal 
-            initialMessageMessage={proposalDraftMessage} 
+          <ContactPortal
+            initialMessageMessage={proposalDraftMessage}
             emergencyActive={emergencyActive}
             setEmergencyActive={setEmergencyActive}
           />
@@ -367,7 +365,7 @@ export default function App() {
       {/* Main Footer Block */}
       <footer className="bg-slate-900/5 backdrop-blur-sm border-t border-blue-100 py-12 mt-16 text-slate-500 font-mono text-xs relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-3.5 md:col-span-2">
               <div className="flex items-center space-x-2.5">
