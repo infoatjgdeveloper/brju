@@ -5,6 +5,9 @@
   --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Fira Code", "Space Mono", monospace;
 
+  --color-primary: #002e5d;
+  --color-accent: #00c48c;
+
   /* Premium High-End Light Accents & Blues */
   --color-slate-950: #ffffff; /* Re-mapped for pristine white bg */
   --color-slate-900: #f8fafc; /* Beautiful soft slate white card base */

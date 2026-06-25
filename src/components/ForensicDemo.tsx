@@ -95,8 +95,8 @@ export default function ForensicDemo() {
       {/* Intro Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-blue-100 pb-5">
         <div>
-          <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider block font-mono">// SPECIALIZED TECHNICAL ANALYSIS</span>
-          <h2 className="text-2xl font-bold text-blue-950 uppercase tracking-tight mt-1 flex items-center gap-2">
+          <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider block font-mono">// SPECIALIZED TECHNICAL ANALYSIS</span>
+          <h2 className="text-2xl font-bold text-text-title uppercase tracking-tight mt-1 flex items-center gap-2">
             <span>FORENSICS & INCIDENT LAB</span>
           </h2>
           <p className="text-xs text-slate-650 mt-1 max-w-3xl leading-relaxed">
@@ -113,7 +113,7 @@ export default function ForensicDemo() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Playbook Carousel (Progress steps) */}
         <div className="col-span-1 lg:col-span-6 space-y-4">
-          <h3 className="text-[10px] font-semibold text-blue-600 tracking-wider uppercase font-mono">// BRJU FORENSIC PLAYBOOK CHRONOLOGY</h3>
+          <h3 className="text-[10px] font-semibold text-blue-600 dark:text-blue-400 tracking-wider uppercase font-mono">// BRJU FORENSIC PLAYBOOK CHRONOLOGY</h3>
           
           <div className="space-y-3">
             {SIMULATION_STEPS.map((step, idx) => (
@@ -128,7 +128,7 @@ export default function ForensicDemo() {
               >
                 <div className="flex items-center justify-between">
                   <span className={`text-[9px] font-mono px-2.5 py-0.5 rounded-full border uppercase font-semibold ${
-                    activeStep === idx ? 'text-blue-700 bg-blue-500/10 border-blue-500/20' : 'text-slate-500 bg-white border-blue-100'
+                    activeStep === idx ? 'text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-500/15 border-blue-200 dark:border-blue-500/30' : 'text-slate-400 bg-slate-950 border-slate-800'
                   }`}>
                     PHASE 0{step.id} — {step.phase}
                   </span>
@@ -143,7 +143,7 @@ export default function ForensicDemo() {
                     <div className="grid grid-cols-2 gap-3 text-[10px] bg-white p-4 rounded-xl border border-blue-100/50 shadow-sm">
                       <div>
                         <span className="text-slate-400 block uppercase font-bold text-[9px] mb-0.5 tracking-wider">TOOL UTILIZED:</span>
-                        <span className="text-blue-600 font-semibold">{step.toolUsed}</span>
+                        <span className="text-blue-600 dark:text-blue-400 font-semibold">{step.toolUsed}</span>
                       </div>
                       <div>
                         <span className="text-slate-400 block uppercase font-bold text-[9px] mb-0.5 tracking-wider">PRIMARY ARTIFACT:</span>
@@ -172,8 +172,8 @@ export default function ForensicDemo() {
           <div className="space-y-5">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-blue-100 pb-4">
               <div className="flex items-center gap-2">
-                <Terminal className="text-blue-600 w-4 h-4" />
-                <span className="text-xs font-bold text-blue-950 tracking-wider font-mono">// ARTIFACT SCANNER UNIT</span>
+                <Terminal className="text-blue-600 dark:text-blue-400 w-4 h-4" />
+                <span className="text-xs font-bold text-text-title tracking-wider font-mono">// ARTIFACT SCANNER UNIT</span>
               </div>
               
               <div className="flex bg-blue-50 p-1 rounded-full border border-blue-100">
@@ -254,7 +254,7 @@ export default function ForensicDemo() {
               {simRating !== 'idle' && (
                 <button
                   onClick={handleResetSim}
-                  className="px-4 py-1.5 border border-blue-200 hover:bg-blue-50 bg-white text-blue-700 text-xs font-semibold rounded-full cursor-pointer transition-colors shadow-sm"
+                  className="px-4 py-1.5 border border-border-main hover:bg-bg-adaptive-850 bg-bg-adaptive-900 text-blue-600 dark:text-blue-400 text-xs font-semibold rounded-full cursor-pointer transition-colors shadow-sm"
                 >
                   RESET
                 </button>

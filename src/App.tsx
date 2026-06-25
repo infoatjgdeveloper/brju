@@ -6,6 +6,7 @@ import ForensicDemo from './components/ForensicDemo';
 import HardwareStore from './components/HardwareStore';
 import ContactPortal from './components/ContactPortal';
 import ConnectedDotsBackground from './components/ConnectedDotsBackground';
+import ChatWidget from './components/ChatWidget';
 import { PARTNERS } from './data/partners';
 import {
   ShieldAlert, ShieldCheck, Terminal, Filter, Search, Check,
@@ -411,6 +412,7 @@ export default function App() {
 
         </div>
       </footer>
+      <ChatWidget />
     </div>
   );
 }

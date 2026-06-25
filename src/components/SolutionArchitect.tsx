@@ -110,22 +110,22 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
   };
 
   return (
-    <div className="bg-white/85 backdrop-blur-md rounded-3xl overflow-hidden relative shadow-lg shadow-blue-500/5 border border-blue-100 font-sans">
+    <div className="premium-card rounded-3xl overflow-hidden relative shadow-lg border border-border-main font-sans animate-fadeIn">
       {/* Background radial highlight */}
       <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/5 blur-[100px] pointer-events-none"></div>
 
-      <div className="bg-blue-50/40 p-6 border-b border-blue-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-bg-adaptive-950/70 p-6 border-b border-border-main flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-sm font-bold tracking-widest text-blue-600 flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-blue-600 animate-pulse" />
+          <h2 className="text-sm font-bold tracking-widest text-blue-600 dark:text-blue-400 flex items-center gap-2 font-mono">
+            <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400 animate-pulse" />
             <span>MSP STRUCTURAL SOLUTION ARCHITECT</span>
           </h2>
-          <p className="text-xs text-slate-600 mt-1">
+          <p className="text-xs text-text-sub mt-1">
             Build your secure enterprise baseline stack. Real-time partner mapping and continuous cost auditing.
           </p>
         </div>
         <div className="text-right shrink-0">
-          <span className="text-[10px] font-mono bg-blue-500/10 border border-blue-500/20 text-blue-700 px-3 py-1 rounded-full uppercase font-semibold">
+          <span className="text-[10px] font-mono bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-500/35 text-blue-700 dark:text-blue-400 px-3 py-1 rounded-full uppercase font-semibold">
             v3.4 Automated System
           </span>
         </div>
@@ -137,11 +137,11 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
             {/* Step-by-Step Configurator Controls */}
             <div className="col-span-1 lg:col-span-7 space-y-6">
               {/* Step indicator pills */}
-              <div className="flex border-b border-blue-100 pb-4">
+              <div className="flex border-b border-border-main pb-4">
                 <button
                   onClick={() => setStep(1)}
                   className={`flex-1 text-center py-2.5 text-xs font-semibold border-b-2 tracking-wider transition-colors cursor-pointer uppercase ${
-                    step === 1 ? 'border-blue-600 text-blue-700 font-bold' : 'border-transparent text-slate-500 hover:text-blue-600'
+                    step === 1 ? 'border-blue-500 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-text-sub hover:text-blue-600 dark:hover:text-blue-400'
                   }`}
                 >
                   01. REGULATORY BASIS
@@ -149,7 +149,7 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
                 <button
                   onClick={() => setStep(2)}
                   className={`flex-1 text-center py-2.5 text-xs font-semibold border-b-2 tracking-wider transition-colors cursor-pointer uppercase ${
-                    step === 2 ? 'border-blue-600 text-blue-700 font-bold' : 'border-transparent text-slate-500 hover:text-blue-600'
+                    step === 2 ? 'border-blue-500 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-text-sub hover:text-blue-600 dark:hover:text-blue-400'
                   }`}
                 >
                   02. TARGET SIZE
@@ -157,7 +157,7 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
                 <button
                   onClick={() => setStep(3)}
                   className={`flex-1 text-center py-2.5 text-xs font-semibold border-b-2 tracking-wider transition-colors cursor-pointer uppercase ${
-                    step === 3 ? 'border-blue-600 text-blue-700 font-bold' : 'border-transparent text-slate-500 hover:text-blue-600'
+                    step === 3 ? 'border-blue-500 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-text-sub hover:text-blue-600 dark:hover:text-blue-400'
                   }`}
                 >
                   03. CORE SUBSYSTEMS
@@ -167,21 +167,21 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
               {/* Step 1 Content: Industry Sector Selection */}
               {step === 1 && (
                 <div className="space-y-4 animate-fadeIn">
-                  <h3 className="text-xs font-bold text-blue-600 uppercase tracking-wider">// Select Governance Basis or Guideline:</h3>
+                  <h3 className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider font-mono">// Select Governance Basis or Guideline:</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div
                       onClick={() => setIndustry('regulatory-nist')}
                       className={`cursor-pointer p-5 rounded-2xl border transition-all ${
                         industry === 'regulatory-nist'
-                          ? 'border-blue-500/50 bg-blue-50/60 shadow-sm shadow-blue-500/5'
-                          : 'border-blue-100 bg-white/50 hover:border-blue-300 hover:bg-blue-50/50'
+                          ? 'border-blue-500/50 bg-blue-50/50 dark:bg-blue-950/40 shadow-sm'
+                          : 'border-border-main bg-bg-adaptive-900/40 hover:border-slate-700 hover:bg-bg-adaptive-850'
                       }`}
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold text-blue-950">NIST SP 800-171 Defense Compliance</span>
-                        {industry === 'regulatory-nist' && <CheckCircle2 className="w-4 h-4 text-blue-600 animate-scaleIn" />}
+                        <span className="text-xs font-bold text-text-title">NIST SP 800-171 Defense Compliance</span>
+                        {industry === 'regulatory-nist' && <CheckCircle2 className="w-4 h-4 text-blue-600 dark:text-blue-400 animate-scaleIn" />}
                       </div>
-                      <p className="text-xs text-slate-600 mt-2 leading-relaxed font-normal">
+                      <p className="text-xs text-text-sub mt-2 leading-relaxed font-normal">
                         Imposes high-grade storage systems, physical hardware chain-of-custodians, and MAGNET forensic preservation mandates.
                       </p>
                     </div>
@@ -190,15 +190,15 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
                       onClick={() => setIndustry('regulatory-hipaa')}
                       className={`cursor-pointer p-5 rounded-2xl border transition-all ${
                         industry === 'regulatory-hipaa'
-                          ? 'border-blue-500/50 bg-blue-50/60 shadow-sm shadow-blue-500/5'
-                          : 'border-blue-100 bg-white/50 hover:border-blue-300 hover:bg-blue-50/50'
+                          ? 'border-blue-500/50 bg-blue-50/50 dark:bg-blue-950/40 shadow-sm'
+                          : 'border-border-main bg-bg-adaptive-900/40 hover:border-slate-700 hover:bg-bg-adaptive-850'
                       }`}
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold text-blue-950">HIPAA Healthcare Shielding</span>
-                        {industry === 'regulatory-hipaa' && <CheckCircle2 className="w-4 h-4 text-blue-600 animate-scaleIn" />}
+                        <span className="text-xs font-bold text-text-title">HIPAA Healthcare Shielding</span>
+                        {industry === 'regulatory-hipaa' && <CheckCircle2 className="w-4 h-4 text-blue-600 dark:text-blue-400 animate-scaleIn" />}
                       </div>
-                      <p className="text-xs text-slate-600 mt-2 leading-relaxed font-normal">
+                      <p className="text-xs text-text-sub mt-2 leading-relaxed font-normal">
                         Focuses heavily on encrypted Odoo data stores, secure e-prescribe tunnels, and KZero biometric ID loops.
                       </p>
                     </div>
@@ -207,15 +207,15 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
                       onClick={() => setIndustry('regulatory-general')}
                       className={`cursor-pointer p-5 rounded-2xl border transition-all ${
                         industry === 'regulatory-general'
-                          ? 'border-blue-500/50 bg-blue-50/60 shadow-sm shadow-blue-500/5'
-                          : 'border-blue-100 bg-white/50 hover:border-blue-300 hover:bg-blue-50/50'
+                          ? 'border-blue-500/50 bg-blue-50/50 dark:bg-blue-950/40 shadow-sm'
+                          : 'border-border-main bg-bg-adaptive-900/40 hover:border-slate-700 hover:bg-bg-adaptive-850'
                       }`}
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold text-blue-950">FIDO2 Commercial Baseline</span>
-                        {industry === 'regulatory-general' && <CheckCircle2 className="w-4 h-4 text-blue-600 animate-scaleIn" />}
+                        <span className="text-xs font-bold text-text-title">FIDO2 Commercial Baseline</span>
+                        {industry === 'regulatory-general' && <CheckCircle2 className="w-4 h-4 text-blue-600 dark:text-blue-400 animate-scaleIn" />}
                       </div>
-                      <p className="text-xs text-slate-600 mt-2 leading-relaxed font-normal">
+                      <p className="text-xs text-text-sub mt-2 leading-relaxed font-normal">
                         Enforces comprehensive SSO protection controls, secure unified VOIP terminals, and basic packet routers.
                       </p>
                     </div>
@@ -224,15 +224,15 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
                       onClick={() => setIndustry('regulatory-essential')}
                       className={`cursor-pointer p-5 rounded-2xl border transition-all ${
                         industry === 'regulatory-essential'
-                          ? 'border-blue-500/50 bg-blue-50/60 shadow-sm shadow-blue-500/5'
-                          : 'border-blue-100 bg-white/50 hover:border-blue-300 hover:bg-blue-50/50'
+                          ? 'border-blue-500/50 bg-blue-50/50 dark:bg-blue-950/40 shadow-sm'
+                          : 'border-border-main bg-bg-adaptive-900/40 hover:border-slate-700 hover:bg-bg-adaptive-850'
                       }`}
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold text-blue-950">Essential Business Protection</span>
-                        {industry === 'regulatory-essential' && <CheckCircle2 className="w-4 h-4 text-blue-600 animate-scaleIn" />}
+                        <span className="text-xs font-bold text-text-title">Essential Business Protection</span>
+                        {industry === 'regulatory-essential' && <CheckCircle2 className="w-4 h-4 text-blue-600 dark:text-blue-400 animate-scaleIn" />}
                       </div>
-                      <p className="text-xs text-slate-600 mt-2 leading-relaxed font-normal">
+                      <p className="text-xs text-text-sub mt-2 leading-relaxed font-normal">
                         Standard network security layers suited for companies looking to lock down primary portals and email.
                       </p>
                     </div>
@@ -241,7 +241,7 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
                   <div className="pt-4 flex justify-end">
                     <button
                       onClick={() => setStep(2)}
-                      className="px-5 py-2.5 bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100/50 text-blue-700 text-xs font-semibold rounded-full flex items-center gap-1.5 cursor-pointer uppercase transition-all shadow-sm"
+                      className="px-5 py-2.5 bg-bg-adaptive-900 border border-border-main hover:bg-bg-adaptive-850 text-blue-600 dark:text-blue-400 text-xs font-semibold rounded-full flex items-center gap-1.5 cursor-pointer uppercase transition-all shadow-sm font-mono"
                     >
                       <span>Next Parameters</span>
                       <ChevronRight className="w-3.5 h-3.5" />
@@ -253,19 +253,19 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
               {/* Step 2 Content: Scalability Seats Tier */}
               {step === 2 && (
                 <div className="space-y-4 animate-fadeIn">
-                  <h3 className="text-xs font-bold text-blue-600 uppercase tracking-wider">// Select Target Seat Scale:</h3>
+                  <h3 className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider font-mono">// Select Target Seat Scale:</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div
                       onClick={() => setSeats('small')}
                       className={`cursor-pointer p-5 rounded-2xl border text-center transition-all ${
                         seats === 'small'
-                          ? 'border-blue-500/50 bg-blue-50/60 shadow-sm shadow-blue-500/5'
-                          : 'border-blue-100 bg-white/50 hover:border-blue-350'
+                          ? 'border-blue-500/50 bg-blue-550/10 dark:bg-blue-950/40 shadow-sm'
+                          : 'border-border-main bg-bg-adaptive-900/40 hover:border-slate-700'
                       }`}
                     >
-                      <Building2 className="w-7 h-7 text-blue-600 mx-auto mb-3" />
-                      <div className="text-xs font-bold text-blue-950 uppercase tracking-wider">1 - 20 Employees</div>
-                      <p className="text-[11px] text-slate-600 mt-2 leading-relaxed font-normal">
+                      <Building2 className="w-7 h-7 text-blue-600 dark:text-blue-400 mx-auto mb-3 animate-pulse" />
+                      <div className="text-xs font-bold text-text-title uppercase tracking-wider font-mono">1 - 20 Employees</div>
+                      <p className="text-[11px] text-text-sub mt-2 leading-relaxed font-normal">
                         Core coverage with priority helpdesk triage paths.
                       </p>
                     </div>
@@ -274,14 +274,14 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
                       onClick={() => setSeats('medium')}
                       className={`cursor-pointer p-5 rounded-2xl border text-center transition-all ${
                         seats === 'medium'
-                          ? 'border-blue-500/50 bg-blue-50/60 shadow-sm shadow-blue-500/5'
-                          : 'border-blue-100 bg-white/50 hover:border-blue-350'
+                          ? 'border-blue-500/50 bg-blue-550/10 dark:bg-blue-950/40 shadow-sm'
+                          : 'border-border-main bg-bg-adaptive-900/40 hover:border-slate-700'
                       }`}
                     >
-                      <Server className="w-7 h-7 text-blue-600 mx-auto mb-3" />
-                      <div className="text-xs font-bold text-blue-950 uppercase tracking-wider">21 - 100 Employees</div>
-                      <p className="text-[11px] text-slate-600 mt-2 leading-relaxed font-normal">
-                        Full operations monitoring, integrated RMM patching, and quarterly sweeps.
+                      <Server className="w-7 h-7 text-blue-600 dark:text-blue-400 mx-auto mb-3 animate-pulse" />
+                      <div className="text-xs font-bold text-text-title uppercase tracking-wider font-mono">21 - 100 Employees</div>
+                      <p className="text-[11px] text-text-sub mt-2 leading-relaxed font-normal">
+                        Full operations monitoring, integrated RMM patching, and sweeps.
                       </p>
                     </div>
 
@@ -289,14 +289,14 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
                       onClick={() => setSeats('enterprise')}
                       className={`cursor-pointer p-5 rounded-2xl border text-center transition-all ${
                         seats === 'enterprise'
-                          ? 'border-blue-500/50 bg-blue-50/60 shadow-sm shadow-blue-500/5'
-                          : 'border-blue-100 bg-white/50 hover:border-blue-350'
+                          ? 'border-blue-500/50 bg-blue-550/10 dark:bg-blue-950/40 shadow-sm'
+                          : 'border-border-main bg-bg-adaptive-900/40 hover:border-slate-700'
                       }`}
                     >
-                      <UserCheck className="w-7 h-7 text-blue-600 mx-auto mb-3" />
-                      <div className="text-xs font-bold text-blue-950 uppercase tracking-wider">101 - 500+ Enterprise</div>
-                      <p className="text-[11px] text-slate-600 mt-2 leading-relaxed font-normal">
-                        Dedicated vCISO allocation, intrusion red teaming, and MAGNET forensic retainer.
+                      <UserCheck className="w-7 h-7 text-blue-600 dark:text-blue-400 mx-auto mb-3 animate-pulse" />
+                      <div className="text-xs font-bold text-text-title uppercase tracking-wider font-mono">101 - 500+ Enterprise</div>
+                      <p className="text-[11px] text-text-sub mt-2 leading-relaxed font-normal">
+                        Dedicated vCISO allocation, intrusion sweeps, and forensics.
                       </p>
                     </div>
                   </div>
@@ -304,13 +304,13 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
                   <div className="pt-4 flex justify-between">
                     <button
                       onClick={() => setStep(1)}
-                      className="px-4 py-2 border border-blue-100 hover:bg-blue-50 text-slate-650 text-xs rounded-full cursor-pointer uppercase transition-colors"
+                      className="px-4 py-2 border border-border-main hover:bg-bg-adaptive-850 text-text-sub text-xs rounded-full cursor-pointer uppercase transition-colors font-mono"
                     >
                       Back
                     </button>
                     <button
                       onClick={() => setStep(3)}
-                      className="px-5 py-2.5 bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100/50 text-blue-700 text-xs font-semibold rounded-full flex items-center gap-1.5 cursor-pointer uppercase transition-all shadow-sm"
+                      className="px-5 py-2.5 bg-bg-adaptive-900 border border-border-main hover:bg-bg-adaptive-850 text-blue-600 dark:text-blue-400 text-xs font-semibold rounded-full flex items-center gap-1.5 cursor-pointer uppercase transition-all shadow-sm font-mono"
                     >
                       <span>Next Parameters</span>
                       <ChevronRight className="w-3.5 h-3.5" />
