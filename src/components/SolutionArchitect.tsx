@@ -125,7 +125,7 @@ export default function SolutionArchitect({ onContactFormRedirect }: SolutionArc
           </p>
         </div>
         <div className="text-right shrink-0">
-          <span className="text-[10px] font-mono bg-blue-50 text-blue-700 border border-blue-200 dark:bg-blue-950/40 dark:border-blue-500/35 dark:text-blue-400 px-3 py-1.5 rounded-full uppercase font-bold tracking-wide shadow-sm">
+          <span className="text-[10px] font-mono bg-blue-50 text-blue-700 border border-blue-200  dark:text-blue-400 px-3 py-1.5 rounded-full uppercase font-bold tracking-wide shadow-sm">
             v3.4 Automated System
           </span>
         </div>
