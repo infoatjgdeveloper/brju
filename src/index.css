@@ -26,6 +26,22 @@
   --color-cyan-500: #2563eb; /* Luxury electric sapphire */
   --color-cyan-400: #3b82f6;
   --color-cyan-300: #60a5fa;
+
+  /* Custom Semantic Theme Mappings for SolutionArchitect and Forensic Lab components */
+  --color-text-title: #0f172a;
+  --color-text-sub: #475569;
+  --color-border-main: #e2e8f0;
+  --color-bg-adaptive-950: #ffffff;
+  --color-bg-adaptive-900: #f8fafc;
+  --color-bg-adaptive-850: #f1f5f9;
+
+  /* Custom typo mappings to prevent transparent/light fallback bugs */
+  --color-slate-650: #475569;
+  --color-slate-655: #475569;
+  --color-blue-550: #2563eb;
+  --color-emerald-250: #10b981;
+  --color-amber-250: #f59e0b;
+  --color-emerald-550: #059669;
 }
 
 body {

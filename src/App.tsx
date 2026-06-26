@@ -50,7 +50,7 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-slate-950/5 text-slate-800 flex flex-col selection:bg-blue-500/20 selection:text-blue-900 antialiased relative">
+    <div className="min-h-screen bg-slate-950/5 flex flex-col selection:bg-blue-500/20 selection:text-blue-900 antialiased relative">
       {/* Dynamic Background of Animated Particle Connected Tunnels */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <ConnectedDotsBackground />
